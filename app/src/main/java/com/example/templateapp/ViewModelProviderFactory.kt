@@ -10,7 +10,7 @@ class ViewModelProviderFactory<VM : ViewModel> @Inject constructor(private val p
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T = provideViewModel(modelClass, viewModel())
 
-    private fun <T : ViewModel> provideViewModel(modelClass: Class<T>, viewModel: VM): T
+    private fun <T : ViewModel> provideViewModel(modelClass: Class<T>, viewModel: VM): T {
         return if (modelClass.isInstance(viewModel)) viewModel() as T
         else throw IllegalArgumentException("unknown model class ${viewModel.javaClass}")
     }
