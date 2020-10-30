@@ -15,4 +15,5 @@ class MainActivityViewModel @ViewModelInject constructor(
     fun bark() {
         Log.v("TAG", resources.getString(R.string.app_name))
     }
+    
 }
