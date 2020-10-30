@@ -16,5 +16,4 @@ class ViewModelProviderFactory<VM : ViewModel> @Inject constructor(private val p
     }
 
     private fun viewModel(): VM = provider.get()
-    
 }
