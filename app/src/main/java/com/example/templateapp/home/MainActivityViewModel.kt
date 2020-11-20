@@ -1,4 +1,4 @@
-package com.example.templateapp.application
+package com.example.templateapp.home
 
 import android.content.res.Resources
 import android.util.Log
@@ -8,9 +8,7 @@ import com.example.domain.usecase.LoginUseCase
 import com.example.templateapp.R
 
 class MainActivityViewModel @ViewModelInject constructor(
-    private val resources: Resources,
-    private val loginUseCase: LoginUseCase
-): ViewModel() {
+    private val resources: Resources): ViewModel() {
 
     fun bark() {
         Log.v("TAG", resources.getString(R.string.app_name))
