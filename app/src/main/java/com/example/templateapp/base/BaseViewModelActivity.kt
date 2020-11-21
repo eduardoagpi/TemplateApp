@@ -4,8 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 
-
 abstract class BaseViewModelActivity<VM: BaseViewModel<VS, VA>, VS: BaseViewState, VA: BaseViewAction>: AppCompatActivity() {
+
+    protected abstract val viewModel: VM
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,9 +17,7 @@ abstract class BaseViewModelActivity<VM: BaseViewModel<VS, VA>, VS: BaseViewStat
         }
     }
 
-    abstract val viewModel: VM
+    protected abstract fun renderFreshState(freshState: VS)
 
-    abstract fun renderFreshState(freshState: VS)
-
-    abstract fun handleAction(action: VA)
+    protected abstract fun handleAction(action: VA)
 }

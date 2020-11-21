@@ -14,4 +14,5 @@
 
     <string name="user_short">Username muy corto</string>
     <string name="password_short">Password muy corto</string>
+    <string name="hi">Hi!!!</string>
 </resources>

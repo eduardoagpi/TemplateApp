@@ -17,7 +17,7 @@ abstract class BaseViewModel<VS: BaseViewState, VA: BaseViewAction> : ViewModel(
     val actionLiveData: LiveData<VA>
         get() = _actionLiveData
 
-    abstract fun determineState(): VS
+    protected abstract fun determineState(): VS
 
     protected fun postFreshState() {
         viewModelScope.launch(Dispatchers.Main) {

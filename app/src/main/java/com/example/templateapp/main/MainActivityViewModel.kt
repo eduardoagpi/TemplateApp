@@ -1,10 +1,9 @@
-package com.example.templateapp.home
+package com.example.templateapp.main
 
 import android.content.res.Resources
 import android.util.Log
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
-import com.example.domain.usecase.LoginUseCase
 import com.example.templateapp.R
 
 class MainActivityViewModel @ViewModelInject constructor(
